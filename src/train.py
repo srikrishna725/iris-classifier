@@ -1,4 +1,4 @@
-
+import joblib
 import argparse
 import os
 import matplotlib.pyplot as plt
@@ -52,3 +52,6 @@ plt.close()
 print("Confusion matrix saved to outputs/confusion_matrix.png")
 
 print("Feature importances:", model.feature_importances_)
+# Save the trained model
+joblib.dump(model, "../outputs/decision_tree_model.joblib")
+print("Model saved to outputs/decision_tree_model.joblib")
